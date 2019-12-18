@@ -3,7 +3,7 @@ android:
   components:
     - android-28
     - build-tools-27.0.3
-
+dist: trusty
 #env:
 #  global:
    # install timeout in minutes (2 minutes by default)
