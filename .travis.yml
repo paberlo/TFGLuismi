@@ -4,7 +4,7 @@ android:
     - android-28
     - build-tools-27.0.3
 before_script:
-  - git update-index --chmod=+x gradlew
+  - chmod +x gradlew
 #env:
 #  global:
    # install timeout in minutes (2 minutes by default)
