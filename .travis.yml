@@ -3,7 +3,8 @@ android:
   components:
     - android-28
     - build-tools-27.0.3
-before_script:
+#before_script:
+before_install:
   - chmod +x gradlew
 #env:
 #  global:
