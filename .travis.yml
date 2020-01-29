@@ -19,7 +19,8 @@ android:
 
   licenses:
     - 'android-sdk-license-.+'
-
+  before_install:
+    - chmod +x gradlew
   # Emulator Management: Create, Start and Wait
   before_script:
     - echo no | android create avd --force -n test -t android-29 --abi armeabi-v7a
