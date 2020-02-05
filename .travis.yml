@@ -3,10 +3,10 @@ dist: trusty
 
 cache:
   directories:
-    - "$HOME/.m2",
-    - "$HOME/.gradle/caches/",
-    - "$HOME/.gradle/wrapper/",
-    - "$HOME/.android/build-cache"
+    - $HOME/.m2
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.android/build-cache
 
 
 
