@@ -5,7 +5,7 @@ dist: trusty
 env:
   global:
     - ANDROID_API=29
-    - EMULATOR_API=29
+    - EMULATOR_API=29 #24
     - ANDROID_BUILD_TOOLS=29.0.2
 
 cache:
@@ -42,8 +42,10 @@ before_script:
   - echo \"y\" | android update sdk -a --no-ui --filter android-$EMULATOR_API
   - echo \"y\" | android update sdk -a --no-ui --filter sys-img-armeabi-v7a-android-$EMULATOR_API
   - android list targets #| grep -E '^id:' | awk -F '\"' '{$1=\"\"; print $2}'
-  - echo no | android create avd --force -n test -t android-$EMULATOR_API --abi armeabi-v7a
-  - emulator -avd test -no-skin -no-window &
+  #- echo no | android create avd --force -n test -t android-$EMULATOR_API --abi armeabi-v7a
+  - echo no | android create avd --force -n test -t android-$EMULATOR_API
+  #- emulator -avd test -no-skin -no-window &
+  - emulator -avd test -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
 
